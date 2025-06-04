@@ -77,5 +77,6 @@ int		ft_lhex(unsigned int n);
 int		ft_udec(unsigned int n);
 int		ft_dec(int n);
 int		ft_hexptr(unsigned long n);
+int		ft_strcmp(const char *s1, const char *s2)
 
 #endif

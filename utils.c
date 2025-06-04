@@ -36,7 +36,12 @@ int	valid(char **arr)
 	int	i;
 	int	j;
 
+	while (arr[i])
+	{
+		while (arr[j])
+		{
 
+		}
 }
 
 char	**copy_args(int argc, char **argv)
