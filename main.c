@@ -12,8 +12,13 @@
 
 #include "push_swap.h"
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	ft_printf("gej");
-	return (0);
+	char	**arr;
+
+	if (argc == 1)
+		return (0);
+	else if (argc == 2)
+		arr = ft_split(argv[1], ' ');
+
 }
