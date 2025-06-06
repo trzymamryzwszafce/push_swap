@@ -36,12 +36,29 @@ int	valid(char **arr)
 	int	i;
 	int	j;
 
+	i = 0;
 	while (arr[i])
 	{
+		j = 0;
 		while (arr[j])
 		{
-
+			if (i != j && !ft_strcmp(arr[i], arr[j]))
+				return (0);
+			j++;
 		}
+		i++;
+	}
+	return (1);
+}
+
+int	stack_size(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+		i++;
+	return (i);
 }
 
 char	**copy_args(int argc, char **argv)

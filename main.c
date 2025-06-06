@@ -24,10 +24,10 @@ int	main(int argc, char **argv)
 		arr = ft_split(argv[1], ' ');
 	else
 		arr = copy_args(argc, argv)
-	if (!valid(arr)) // TODO
+	if (!valid(arr))
 		return(p_error());
-	stack->size_a = stack_size(arr); // TODO
-	stack->stack_a = stack_fill(arr, stack->size_a); // TODO
+	stack->size_a = stack_size(arr);
+	stack->stack_a = stack_fill(arr, stack->size_a);
 	freearr(arr);
 	if (stack->size_a <= 3)
 		sort_three(stack); // TODO

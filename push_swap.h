@@ -22,9 +22,9 @@
 
 typedef struct s_stack
 {
-	int	stack_a;
+	int	*stack_a;
 	int	size_a;
-	int	stack_b;
+	int	*stack_b;
 	int	size_b;
 }		t_stack;
 
