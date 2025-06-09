@@ -26,10 +26,27 @@ typedef struct s_stack
 	int	size_a;
 	int	*stack_b;
 	int	size_b;
+	int	max;
 }		t_stack;
 
 int	p_error(void);
 char	**copy_args(int argc, char **argv);
 void	freearr(char **s);
+int	valid(char **arr);
+int	stack_size(char **arr);
+int	*stack_fill(char **arr, int size);
+int	find_biggest(int *stack);
+void	sa(t_stack *stack, bool check);
+void	sb(t_stack *stack, bool check);
+void	ss(t_stack *stack);
+void	pa(t_stack *stack);
+void	pb(t_stack *stack);
+void	ra(t_stack *stack, bool check);
+void	rb(t_stack *stack, bool check);
+void	rr(t_stack *stack);
+void	rra(t_stack *stack, bool check);
+void	rrb(t_stack *stack, bool check);
+void	rrr(t_stack *stack);
+void	sort_three(t_stack *stack);
 
 #endif

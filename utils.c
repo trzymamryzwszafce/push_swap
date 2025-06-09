@@ -75,7 +75,7 @@ char	**copy_args(int argc, char **argv)
 		arr[i - 1] = malloc(ft_strlen(argv[i]) + 1);
 		if (!arr[i - 1])
 			p_error();
-		strcpy(arr[i - 1], argv[i]);
+		ft_strcpy(arr[i - 1], argv[i]);
 		i++;
 	}
 	arr[i - 1] = NULL;

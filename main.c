@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	else if (argc == 2)
 		arr = ft_split(argv[1], ' ');
 	else
-		arr = copy_args(argc, argv)
+		arr = copy_args(argc, argv);
 	if (!valid(arr))
 		return(p_error());
 	stack->size_a = stack_size(arr);
@@ -31,8 +31,8 @@ int	main(int argc, char **argv)
 	freearr(arr);
 	if (stack->size_a <= 3)
 		sort_three(stack); // TODO
-	else
-		push_swap(stack); // TODO
-	free_stack(stack); // TODO
+//	else
+//		push_swap(stack); // TODO
+//	free_stack(stack); // TODO
 	return (0);
 }

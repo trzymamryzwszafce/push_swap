@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	sa(t_stack *stack)
+void	sa(t_stack *stack, bool check)
 {
 	int	temp;
 
