@@ -17,14 +17,14 @@ int	*stack_fill(char **arr, int size)
 	return (stack);
 }
 
-int	find_biggest(int *stack)
+int	find_biggest(int *stack, int size)
 {
 	int	i;
 	int	max;
 
 	i = 0;
 	max = stack[0];
-	while (i < 3)
+	while (i < size)
 	{
 		if (stack[i] > max)
 			max = stack[i];

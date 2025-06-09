@@ -35,7 +35,7 @@ void	freearr(char **s);
 int	valid(char **arr);
 int	stack_size(char **arr);
 int	*stack_fill(char **arr, int size);
-int	find_biggest(int *stack);
+int	find_biggest(int *stack, int size);
 void	sa(t_stack *stack, bool check);
 void	sb(t_stack *stack, bool check);
 void	ss(t_stack *stack);
