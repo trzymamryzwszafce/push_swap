@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:49:56 by szmadeja          #+#    #+#             */
-/*   Updated: 2025/06/04 20:05:16 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:16:44 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ int	main(int argc, char **argv)
 
 	stack = malloc(sizeof(*stack));
 	if (argc == 1)
-		return(p_error());
+		return (p_error());
 	else if (argc == 2)
 		arr = ft_split(argv[1], ' ');
 	else
 		arr = copy_args(argc, argv);
 	if (!valid(arr))
-		return(p_error());
+		return (p_error());
 	stack->size_a = stack_size(arr);
 	stack->stack_a = stack_fill(arr, stack->size_a);
 	freearr(arr);
 	if (stack->size_a <= 3)
-		sort_three(stack); // TODO
-//	else
-//		push_swap(stack); // TODO
-//	free_stack(stack); // TODO
+		sort_three(stack);
+	else
+		push_swap(stack);
+	free_stack(stack);
 	return (0);
 }

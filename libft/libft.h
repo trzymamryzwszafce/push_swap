@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 21:38:55 by szmadeja          #+#    #+#             */
-/*   Updated: 2024/12/19 00:43:34 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:08:03 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,5 @@ int		ft_dec(int n);
 int		ft_hexptr(unsigned long n);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *s1, char *s2);
-
 
 #endif

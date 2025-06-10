@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 18:01:56 by szmadeja          #+#    #+#             */
-/*   Updated: 2025/06/04 20:30:00 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:24:47 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ int	valid(char **arr)
 		{
 			if (i != j && !ft_strcmp(arr[i], arr[j]))
 				return (0);
+			else if ((arr[i][j] >= 65 && arr[i][j] <= 90) || (arr[i][j]
+					>= 97 && arr[i][j] <= 122))
+				return (0);
 			j++;
 		}
 		i++;
@@ -64,7 +67,7 @@ int	stack_size(char **arr)
 char	**copy_args(int argc, char **argv)
 {
 	char	**arr;
-	int	i;
+	int		i;
 
 	arr = malloc(sizeof(char *) * (argc));
 	if (!arr)
