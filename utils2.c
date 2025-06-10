@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 18:11:56 by szmadeja          #+#    #+#             */
-/*   Updated: 2025/06/10 18:12:41 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:24:07 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,18 @@ int	find_biggest(int *stack, int size)
 		i++;
 	}
 	return (max);
+}
+
+int	issorted(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack->size_a - 1)
+	{
+		if (stack->stack_a[i] > stack->stack_a[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
 }

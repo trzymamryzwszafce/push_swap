@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:49:56 by szmadeja          #+#    #+#             */
-/*   Updated: 2025/06/10 19:16:44 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:26:19 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ int	main(int argc, char **argv)
 	stack->size_a = stack_size(arr);
 	stack->stack_a = stack_fill(arr, stack->size_a);
 	freearr(arr);
-	if (stack->size_a <= 3)
-		sort_three(stack);
-	else
-		push_swap(stack);
-	free_stack(stack);
+	if (!issorted(stack))
+		if (stack->size_a <= 3)
+			sort_three(stack);
+//		else
+//			push_swap(stack); //TODO
+//	free_stack(stack); // TODO
 	return (0);
 }

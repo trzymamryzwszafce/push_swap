@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 18:08:22 by szmadeja          #+#    #+#             */
-/*   Updated: 2025/06/10 19:16:51 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:27:18 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	sort_three(t_stack *stack)
 		sa(stack, true);
 }
 
-void	radix(t_stack *stack)
+/*void	radix(t_stack *stack)
 {
 }
 
-void	radix_sort(t_stack *a, t_stack *b)// dodatkowa funkcjA do sortowania zamiast sort_big
+void	radix_sort(t_stack *a, t_stack *b)
 {
 	int	max_num = a->size - 1;
 	int	max_bits = 0;
@@ -56,4 +56,4 @@ void	radix_sort(t_stack *a, t_stack *b)// dodatkowa funkcjA do sortowania zamias
 		while (b->size > 0)
 			pa(a, b);
 	}
-}
+}*/

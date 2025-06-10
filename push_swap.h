@@ -6,7 +6,7 @@
 /*   By: szmadeja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:50:19 by szmadeja          #+#    #+#             */
-/*   Updated: 2025/06/04 20:04:07 by szmadeja         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:25:43 by szmadeja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,14 @@ typedef struct s_stack
 	int	max;
 }		t_stack;
 
-int	p_error(void);
+int		p_error(void);
 char	**copy_args(int argc, char **argv);
 void	freearr(char **s);
-int	valid(char **arr);
-int	stack_size(char **arr);
-int	*stack_fill(char **arr, int size);
-int	find_biggest(int *stack, int size);
+int		valid(char **arr);
+int		stack_size(char **arr);
+int		*stack_fill(char **arr, int size);
+int		find_biggest(int *stack, int size);
+int		issorted(t_stack *stack);
 void	sa(t_stack *stack, bool check);
 void	sb(t_stack *stack, bool check);
 void	ss(t_stack *stack);
