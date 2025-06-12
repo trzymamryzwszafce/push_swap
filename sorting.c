@@ -27,6 +27,31 @@ void	sort_three(t_stack *stack)
 		sa(stack, true);
 }
 
+void	sort_4_5(t_stack *stack)
+{
+	int	min;
+	int	i;
+	int	size;
+
+	size = stack->size_a;
+	i = 0;
+	while (i++ < size - 3)
+	{
+		min = find_lowest(stack->stack_a, stack->size_a);
+		while (stack->stack_a[0] != min)
+		{
+			if (find_position(stack->stack_a, stack->size_a, min) <= stack->size_a / 2)
+				ra(stack, true);
+			else
+				rra(stack, true);
+		}
+		pb(stack);
+	}
+	sort_three(stack);
+	while (stack->size_b > 0)
+		pa(stack);
+}
+
 void	radix(t_stack *stack)
 {
 	int	i;
@@ -59,5 +84,8 @@ void	radix(t_stack *stack)
 void	push_swap(t_stack *stack)
 {
 	stack->stack_b = malloc(sizeof(int *) * stack->size_a);
-	radix(stack);
+	if (stack->size_a == 4 || stack->size_a == 5)
+		sort_4_5(stack);
+	else
+		radix(stack);
 }

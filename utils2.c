@@ -45,6 +45,22 @@ int	find_biggest(int *stack, int size)
 	return (max);
 }
 
+int	find_lowest(int *stack, int size)
+{
+	int	i;
+	int	min;
+
+	i = 0;
+	min = stack[0];
+	while (i < size)
+	{
+		if (stack[i] < min)
+			min = stack[i];
+		i++;
+	}
+	return (min);
+}
+
 int	issorted(t_stack *stack)
 {
 	int	i;
@@ -57,6 +73,20 @@ int	issorted(t_stack *stack)
 		i++;
 	}
 	return (1);
+}
+
+int	find_position(int *stack, int size, int value)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (stack[i] == value)
+			return i;
+		i++;
+	}
+	return (-1);
 }
 
 void	free_stack(t_stack *stack)

@@ -40,6 +40,6 @@ int	main(int argc, char **argv)
 		ft_printf("ok");
 	else
 		ft_printf("nieok");
-//	free_stack(stack); // TODO
+	free_stack(stack); // TODO
 	return (0);
 }
