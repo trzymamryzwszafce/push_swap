@@ -27,33 +27,37 @@ void	sort_three(t_stack *stack)
 		sa(stack, true);
 }
 
-/*void	radix(t_stack *stack)
+void	radix(t_stack *stack)
 {
-}
-
-void	radix_sort(t_stack *a, t_stack *b)
-{
-	int	max_num = a->size - 1;
-	int	max_bits = 0;
 	int	i;
 	int	j;
+	int	max_num;
+	int	max_bits;
 	int	size;
 
+	max_num = stack->size_a - 1;
+	max_bits = 0;
 	while ((max_num >> max_bits) != 0)
 		max_bits++;
 	i = -1;
 	while (++i < max_bits)
 	{
 		j = -1;
-		size = a->size;
+		size = stack->size_a;
 		while (++j < size)
 		{
-			if (((a->top->index >> i) & 1) == 1)
-				ra(a);
+			if (((stack->stack_a[0] >> i) & 1) == 1)
+				ra(stack, true);
 			else
-				pb(a, b);
+				pb(stack);
 		}
-		while (b->size > 0)
-			pa(a, b);
+		while (stack->size_b > 0)
+			pa(stack);
 	}
-}*/
+}
+
+void	push_swap(t_stack *stack)
+{
+	stack->stack_b = malloc(sizeof(int *) * stack->size_a);
+	radix(stack);
+}

@@ -58,3 +58,10 @@ int	issorted(t_stack *stack)
 	}
 	return (1);
 }
+
+void	free_stack(t_stack *stack)
+{
+	free(stack->stack_a);
+	if (stack->stack_b)
+		free(stack->stack_b);
+}

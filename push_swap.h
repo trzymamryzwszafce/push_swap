@@ -49,5 +49,8 @@ void	rra(t_stack *stack, bool check);
 void	rrb(t_stack *stack, bool check);
 void	rrr(t_stack *stack);
 void	sort_three(t_stack *stack);
+void	push_swap(t_stack *stack);
+void	radix(t_stack *stack);
+void	free_stack(t_stack *stack);
 
 #endif

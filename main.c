@@ -30,10 +30,16 @@ int	main(int argc, char **argv)
 	stack->stack_a = stack_fill(arr, stack->size_a);
 	freearr(arr);
 	if (!issorted(stack))
+	{
 		if (stack->size_a <= 3)
 			sort_three(stack);
-//		else
-//			push_swap(stack); //TODO
+		else
+			push_swap(stack); //TODO
+	}
+	if (issorted(stack))
+		ft_printf("ok");
+	else
+		ft_printf("nieok");
 //	free_stack(stack); // TODO
 	return (0);
 }
