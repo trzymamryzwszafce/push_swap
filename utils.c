@@ -40,12 +40,16 @@ int	valid(char **arr)
 	while (arr[i])
 	{
 		j = 0;
+		while (arr[i][j])
+		{
+			if (!ft_isdigit(arr[i][j]) && arr[i][j] != '-')
+				return (0);
+			j++;
+		}
+		j = i + 1;
 		while (arr[j])
 		{
-			if (i != j && !ft_strcmp(arr[i], arr[j]))
-				return (0);
-			else if ((arr[i][j] >= 65 && arr[i][j] <= 90) || (arr[i][j]
-					>= 97 && arr[i][j] <= 122))
+			if (!ft_strcmp(arr[i], arr[j]))
 				return (0);
 			j++;
 		}

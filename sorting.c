@@ -83,7 +83,8 @@ void	radix(t_stack *stack)
 
 void	push_swap(t_stack *stack)
 {
-	stack->stack_b = malloc(sizeof(int *) * stack->size_a);
+	stack->stack_b = malloc(sizeof(int) * stack->size_a);
+	stack->size_b = 0;
 	if (stack->size_a == 4 || stack->size_a == 5)
 		sort_4_5(stack);
 	else

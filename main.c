@@ -34,12 +34,12 @@ int	main(int argc, char **argv)
 		if (stack->size_a <= 3)
 			sort_three(stack);
 		else
-			push_swap(stack); //TODO
+			push_swap(stack);
 	}
 	if (issorted(stack))
 		ft_printf("ok");
 	else
 		ft_printf("nieok");
-	free_stack(stack); // TODO
+	free_stack(stack);
 	return (0);
 }
